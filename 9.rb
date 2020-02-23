@@ -10,7 +10,7 @@ class Shape
       @length = length
     end
     def welcome
-    
+      puts "Hi. I am Rectangle, and my parent says: #{super}"
     end
   
     def area
@@ -22,17 +22,14 @@ class Shape
     end
   end
   class Square < Rectangle
-  
+    
+    def initialize(sqr)
+      super(sqr, sqr)
+    end
       def welcome
-  
+        puts "Hi. I am Square, and my parent says: #{super}"
       end
-      def area
-          super
-      end
-  
-      def perimeter
-          super
-      end
+      
   end
   class Triangle < Shape
     def initialize(base_width, height, side1, side2, side3)
@@ -55,18 +52,4 @@ class Shape
     end
   end
   
-  rg = Rectangle.new(5,5)
-  rg.area
-  rg.perimeter
-  puts rg.area
-  puts rg.perimeter
-  
-  sq = Square.new(5,5)
-  sq.area
-  sq.perimeter
-  puts sq.area
-  puts sq.perimeter
-  
-  tr = Triangle.new(5,6,6,4,3)
-  puts tr.welcome
   
